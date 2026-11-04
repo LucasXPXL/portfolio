@@ -17,4 +17,4 @@ Plataforma de cobrança multibanco em produção: uma API REST única que conect
 ## Site
 
 Página estática em um único arquivo (`index.html`), sem build. Para ver localmente, abra o arquivo no navegador.
-Publicada pelo GitHub Pages a partir da branch `main`.
+Publicada na Cloudflare Pages (`npx wrangler pages deploy`).
