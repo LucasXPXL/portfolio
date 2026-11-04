@@ -17,4 +17,4 @@ Plataforma de cobrança multibanco em produção: uma API REST única que conect
 ## Site
 
 Página estática em um único arquivo (`index.html`), sem build. Para ver localmente, abra o arquivo no navegador.
-Publicada na Cloudflare Pages (`npx wrangler pages deploy`).
+No ar em https://lucas-pereira.lucasgabriel8952.workers.dev (Cloudflare Workers, projeto `lucas-pereira`).
