@@ -3,511 +3,189 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lucas Pereira · Desenvolvedor</title>
-<meta name="description" content="Lucas Pereira — Desenvolvedor Full Stack Sênior. APIs bancárias, boletos, Pix, links de pagamento, Open Finance, soluções fiscais (NF-e, NFS-e, SPED, Reforma Tributária), aplicativos e sites.">
-<meta property="og:title" content="Lucas Pereira · Desenvolvedor Full Stack Sênior">
-<meta property="og:description" content="APIs bancárias, boletos, Pix, Open Finance, área fiscal, aplicativos e sites.">
+<title>Lucas Pereira, desenvolvedor full stack</title>
+<meta name="description" content="Desenvolvedor full stack sênior. Integração bancária (boletos, Pix, links de pagamento, Open Finance), área fiscal (NF-e, NFS-e, SPED, Reforma Tributária), aplicativos e sites.">
+<meta property="og:title" content="Lucas Pereira, desenvolvedor full stack">
+<meta property="og:description" content="Integração bancária, Pix, Open Finance, área fiscal, aplicativos e sites.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23ffffff'%3ELP%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231c1b19'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' text-anchor='middle' fill='%23faf9f6'%3Elp%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff;
-    --bg-soft: #f4f7f6;
-    --surface: #ffffff;
-    --border: #e2e8e6;
-    --text: #0f1a17;
-    --muted: #55635f;
-    --accent: #059669;
-    --accent-strong: #047857;
-    --accent-soft: #e6f6ef;
-    --code-bg: #0d1513;
-    --code-text: #d7e4df;
-    --code-key: #6ee7b7;
-    --code-str: #fbbf77;
-    --code-num: #93c5fd;
-    --code-dim: #7c8f89;
-    --shadow: 0 1px 2px rgba(15, 26, 23, .06), 0 8px 24px rgba(15, 26, 23, .06);
+    --bg: #faf9f6;
+    --text: #1c1b19;
+    --muted: #6b6860;
+    --line: #e4e1da;
+    --link: #1d4ed8;
+    --code-bg: #f1efe9;
+    --code-str: #9a3412;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #0a100e;
-      --bg-soft: #0f1714;
-      --surface: #111b18;
-      --border: #1f2c28;
-      --text: #e8f0ed;
-      --muted: #9aaba5;
-      --accent: #34d399;
-      --accent-strong: #6ee7b7;
-      --accent-soft: #10241d;
-      --code-bg: #070c0b;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    :root {
+      --bg: #161614;
+      --text: #e8e6e1;
+      --muted: #9c998f;
+      --line: #2c2b27;
+      --link: #8ab4ff;
+      --code-bg: #1f1e1b;
+      --code-str: #f0b37e;
     }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0a100e;
-    --bg-soft: #0f1714;
-    --surface: #111b18;
-    --border: #1f2c28;
-    --text: #e8f0ed;
-    --muted: #9aaba5;
-    --accent: #34d399;
-    --accent-strong: #6ee7b7;
-    --accent-soft: #10241d;
-    --code-bg: #070c0b;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    font: 17px/1.65 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { color: var(--accent-strong); }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
+  main, header, footer { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 720px) { main, header, footer { padding: 0 24px; } }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
 
-  /* Navegação */
-  header.nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--bg) 85%, transparent);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
-  .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
-  .brand-mark {
-    width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center;
-    background: var(--accent); color: #fff; font-size: 14px; font-weight: 800;
-  }
-  .nav-links { display: none; gap: 24px; align-items: center; }
-  .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
-  .nav-links a:hover { color: var(--text); }
-  @media (min-width: 860px) { .nav-links { display: flex; } }
-  .theme-toggle {
-    border: 1px solid var(--border); background: var(--surface); color: var(--text);
-    width: 38px; height: 38px; border-radius: 10px; cursor: pointer; display: grid; place-items: center;
-  }
-  .theme-toggle svg { width: 18px; height: 18px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; padding-top: 48px; }
+  header nav { display: flex; gap: 18px; font-size: 15px; }
+  h1 { font-size: 30px; font-weight: 600; letter-spacing: -0.01em; margin: 0; line-height: 1.2; }
+  .role { color: var(--muted); margin: 4px 0 0; font-size: 17px; }
+  @media (min-width: 720px) { header { padding-top: 72px; } h1 { font-size: 34px; } }
 
-  /* Hero */
-  .hero { padding: 56px 0 40px; }
-  @media (min-width: 720px) { .hero { padding: 88px 0 64px; } }
-  .hero-grid { display: grid; gap: 40px; align-items: center; }
-  /* Sem isso o bloco de código alarga a coluna e a página rola para o lado no celular. */
-  .hero-grid > *, .feature > *, .grid > * { min-width: 0; }
-  @media (min-width: 960px) { .hero-grid { grid-template-columns: 1.05fr .95fr; } }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 13px; font-weight: 600; color: var(--accent);
-    background: var(--accent-soft); padding: 6px 12px; border-radius: 999px;
-  }
-  .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.08; letter-spacing: -0.03em; margin: 18px 0 16px; font-weight: 800; }
-  h1 .role { display: block; color: var(--muted); font-size: .5em; letter-spacing: -0.01em; font-weight: 600; margin-top: 10px; }
-  .lead { font-size: 18px; color: var(--muted); max-width: 560px; margin: 0 0 28px; }
-  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 20px;
-    border-radius: 12px; font-weight: 600; font-size: 15px; border: 1px solid transparent;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-strong); color: #fff; }
-  :root[data-theme="dark"] .btn-primary, :root[data-theme="dark"] .btn-primary:hover { color: #052e22; }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-primary, :root:not([data-theme="light"]) .btn-primary:hover { color: #052e22; } }
-  .btn-ghost { border-color: var(--border); color: var(--text); background: var(--surface); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--text); }
-  .btn svg { width: 18px; height: 18px; }
+  .intro { margin: 36px 0 0; font-size: 19px; }
+  @media (min-width: 720px) { .intro { font-size: 20px; } }
 
-  /* Bloco de código */
-  .code-card {
-    background: var(--code-bg); border-radius: 16px; overflow: hidden;
-    border: 1px solid #1c2a26; box-shadow: var(--shadow);
-  }
-  .code-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #1c2a26; }
-  .code-head i { width: 11px; height: 11px; border-radius: 50%; background: #2b3a36; display: block; }
-  .code-head span { margin-left: 8px; font: 500 12px "JetBrains Mono", monospace; color: var(--code-dim); }
+  .numbers { display: flex; flex-wrap: wrap; gap: 20px 56px; margin: 36px 0 0; padding: 0; list-style: none; }
+  .numbers b { display: block; font-size: 40px; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+  .numbers span { color: var(--muted); font-size: 15px; }
+
+  section { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 28px; }
+  h2 { font-size: 22px; font-weight: 600; margin: 0 0 16px; letter-spacing: -0.01em; }
+  h2 + .sub { margin-top: -12px; }
+  .sub { color: var(--muted); margin: 0 0 18px; font-size: 15px; }
+  p { margin: 0 0 16px; }
+  ul.plain { margin: 0 0 20px; padding-left: 20px; }
+  ul.plain li { margin: 6px 0; }
+
+  .caption { font-size: 15px; color: var(--muted); margin: 24px 0 8px; }
   pre {
-    margin: 0; padding: 18px 20px; overflow-x: auto;
-    font: 400 13px/1.7 "JetBrains Mono", ui-monospace, monospace; color: var(--code-text);
+    margin: 0 0 20px; padding: 16px 18px; overflow-x: auto;
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 6px;
+    font: 13.5px/1.6 "IBM Plex Mono", ui-monospace, monospace;
   }
-  .k { color: var(--code-key); } .s { color: var(--code-str); } .n { color: var(--code-num); } .c { color: var(--code-dim); }
-  .m { color: #f472b6; font-weight: 500; }
+  pre .c { color: var(--muted); }
+  pre .s { color: var(--code-str); }
+  .small { font-size: 15px; color: var(--muted); }
 
-  /* Seções */
-  section { padding: 64px 0; }
-  section.soft { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .section-head { max-width: 680px; margin-bottom: 36px; }
-  .kicker { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
-  h2 { font-size: clamp(28px, 4vw, 38px); line-height: 1.15; letter-spacing: -0.02em; margin: 8px 0 12px; }
-  .section-head p { color: var(--muted); margin: 0; font-size: 17px; }
+  dl { margin: 0; }
+  dl.projects dt { font-weight: 600; margin-top: 18px; }
+  dl.projects dt:first-child { margin-top: 0; }
+  dl.projects dd { margin: 2px 0 0; }
+  dl.tools { display: grid; gap: 6px 24px; }
+  dl.tools dt { color: var(--muted); font-size: 15px; padding-top: 2px; }
+  dl.tools dd { margin: 0 0 10px; }
+  @media (min-width: 640px) { dl.tools { grid-template-columns: 180px 1fr; } dl.tools dd { margin: 0; } }
 
-  /* Números */
-  .stats { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 48px; }
-  @media (min-width: 860px) { .stats { grid-template-columns: repeat(4, 1fr); } }
-  .stat { border: 1px solid var(--border); border-radius: 14px; padding: 18px; background: var(--surface); }
-  .stat b { display: block; font-size: 20px; letter-spacing: -0.02em; }
-  @media (min-width: 720px) { .stat b { font-size: 26px; } }
-  .stat span { color: var(--muted); font-size: 14px; }
+  .links { list-style: none; padding: 0; margin: 0; }
+  .links li { margin: 8px 0; }
+  .links .label { display: inline-block; min-width: 84px; color: var(--muted); font-size: 15px; }
 
-  /* Cards */
-  .grid { display: grid; gap: 16px; }
-  @media (min-width: 720px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1000px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
-  .card {
-    background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
-    transition: border-color .2s, transform .2s;
-  }
-  .card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); transform: translateY(-2px); }
-  .icon {
-    width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
-    background: var(--accent-soft); color: var(--accent); margin-bottom: 16px;
-  }
-  .icon svg { width: 22px; height: 22px; }
-  .card h3 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.01em; }
-  .card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
-  .card ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; }
-  .card li { margin: 4px 0; }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
-  .tag {
-    font: 500 12px "JetBrains Mono", monospace; padding: 4px 9px; border-radius: 7px;
-    background: var(--bg-soft); border: 1px solid var(--border); color: var(--muted);
-  }
-
-  /* Projeto em destaque */
-  .feature { display: grid; gap: 32px; }
-  @media (min-width: 960px) { .feature { grid-template-columns: 1.1fr .9fr; align-items: start; } }
-  .badge {
-    display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
-    border: 1px solid var(--border); color: var(--muted); background: var(--surface);
-  }
-  .checks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
-  .checks li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; color: var(--muted); }
-  .checks li b { color: var(--text); font-weight: 600; }
-  .checks svg { width: 20px; height: 20px; color: var(--accent); margin-top: 3px; }
-
-  .flow { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
-  .flow h4 { margin: 0 0 16px; font-size: 14px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
-  .node { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; background: var(--bg-soft); }
-  .node b { display: block; font-size: 15px; }
-  .node small { color: var(--muted); font-size: 13px; }
-  .node.core { border-color: var(--accent); background: var(--accent-soft); }
-  .arrow { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12.5px; padding: 8px 0 8px 18px; }
-  .arrow::before { content: ""; width: 2px; height: 22px; background: var(--accent); border-radius: 2px; }
-  .banks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .banks .node { padding: 10px 12px; text-align: center; font-weight: 600; font-size: 14px; }
-
-  /* Stack */
-  .stack-group h3 { font-size: 15px; margin: 0 0 12px; }
-  .stack-group .tags { margin-top: 0; }
-  .stack-group .tag { font-size: 13px; padding: 6px 11px; color: var(--text); background: var(--surface); }
-
-  /* Contato */
-  .contact {
-    border: 1px solid var(--border); border-radius: 20px; padding: 36px 24px; text-align: center;
-    background: linear-gradient(180deg, var(--accent-soft), var(--surface));
-  }
-  .contact h2 { margin-top: 0; }
-  .contact p { color: var(--muted); max-width: 560px; margin: 0 auto 24px; }
-  .contact .cta { justify-content: center; }
-
-  footer { padding: 32px 0 40px; color: var(--muted); font-size: 14px; }
-  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  footer { color: var(--muted); font-size: 14px; padding-top: 56px; padding-bottom: 40px; }
 </style>
-<script>
-  // Tema escolhido pelo visitante (opcional; sem armazenamento disponível segue o do sistema).
-  try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
-</script>
 </head>
 <body>
 
-<header class="nav">
-  <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Início"><span class="brand-mark">LP</span> Lucas Pereira</a>
-    <nav class="nav-links" aria-label="Seções">
-      <a href="#especialidades">Especialidades</a>
-      <a href="#destaque">Projeto em destaque</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#stack">Stack</a>
-      <a href="#contato">Contato</a>
-    </nav>
-    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-    </button>
+<header>
+  <div>
+    <h1>Lucas Pereira</h1>
+    <p class="role">Desenvolvedor full stack sênior</p>
   </div>
+  <nav aria-label="Links">
+    <a href="https://www.linkedin.com/in/lucas-gabriel-e-silva-pereira/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/LucasXPXL" target="_blank" rel="noopener">GitHub</a>
+  </nav>
 </header>
 
-<main id="inicio">
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <span class="eyebrow"><span class="dot"></span> Fintech · Fiscal · Aplicativos</span>
-          <h1>Lucas Pereira<span class="role">Desenvolvedor Full Stack Sênior</span></h1>
-          <p class="lead">Construo sistemas que movimentam dinheiro e documentos fiscais: APIs bancárias, emissão de boletos, Pix, links de pagamento, Open Finance, notas fiscais e SPED. Também desenvolvo aplicativos e sites de ponta a ponta, do banco de dados à tela.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="#destaque">Ver projetos</a>
-            <a class="btn btn-ghost" href="https://github.com/LucasXPXL" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
-              GitHub
-            </a>
-          </div>
-        </div>
+<main>
+  <p class="intro">Passo a maior parte do tempo integrando sistemas com bancos e com o fisco: registro e baixa de boletos, Pix, links de pagamento, Open Finance, NF-e, NFS-e e SPED. Quando o projeto pede, também faço o aplicativo e o site, do banco de dados à tela.</p>
 
-        <div class="code-card" aria-label="Exemplo de chamada à API de boletos">
-          <div class="code-head"><i></i><i></i><i></i><span>POST /v1/boletos</span></div>
-<pre><span class="c">// Um contrato único, vários bancos</span>
-<span class="m">POST</span> /v1/boletos
+  <ul class="numbers">
+    <li><b>+15</b><span>bancos integrados</span></li>
+    <li><b>+10.000</b><span>testes automatizados</span></li>
+  </ul>
+
+  <section id="drive-boleto">
+    <h2>Drive Boleto</h2>
+    <p class="sub">Plataforma de cobrança multibanco, em produção</p>
+    <p>É o sistema que eu desenvolvo e mantenho hoje. O ERP do cliente fala com uma API só, e ela conversa com o banco de cada empresa: Sicoob, Sicredi, Itaú e Banco do Brasil. Emite boleto comum e boleto com QR Code Pix, gera o PDF com a logo e a cor de cada empresa e avisa o ERP quando o pagamento cai.</p>
+    <ul class="plain">
+      <li>mTLS e OAuth2 com cada banco; certificados A1 e credenciais guardados cifrados (AES-256-GCM).</li>
+      <li>Webhook nos dois sentidos: recebe o aviso de pagamento do banco, baixa o boleto e repassa ao ERP, com fila de reenvio.</li>
+      <li>PDF montado no servidor: ficha de compensação no padrão FEBRABAN, código de barras e QR Code Pix.</li>
+      <li>Juros, multa, desconto, protesto e negativação, cada um seguindo a regra do banco.</li>
+      <li>Log cifrado de cada chamada ao banco, trilha de auditoria e sincronização periódica de status.</li>
+    </ul>
+
+    <p class="caption">Uma emissão, vista do lado do ERP:</p>
+<pre><span class="c">POST /v1/boletos</span>
 {
-  <span class="k">"externalId"</span>: <span class="s">"NF-11399"</span>,
-  <span class="k">"paymentMethod"</span>: <span class="s">"hybrid_boleto"</span>,
-  <span class="k">"amount"</span>: <span class="n">750.00</span>,
-  <span class="k">"dueDate"</span>: <span class="s">"2026-11-20"</span>,
-  <span class="k">"interest"</span>: { <span class="k">"type"</span>: <span class="s">"percentage"</span>, <span class="k">"value"</span>: <span class="n">2</span> },
-  <span class="k">"payer"</span>: { <span class="k">"name"</span>: <span class="s">"Cliente Exemplo LTDA"</span> }
+  "externalId": <span class="s">"NF-11399"</span>,
+  "paymentMethod": <span class="s">"hybrid_boleto"</span>,
+  "amount": 750.00,
+  "dueDate": <span class="s">"2026-11-20"</span>,
+  "interest": { "type": <span class="s">"percentage"</span>, "value": 2 },
+  "payer": { "name": <span class="s">"Cliente Exemplo LTDA"</span> }
 }
 
-<span class="c">// 201 Created</span>
+<span class="c">201 Created</span>
 {
-  <span class="k">"provider"</span>: <span class="s">"sicoob"</span>,
-  <span class="k">"status"</span>: <span class="s">"pending"</span>,
-  <span class="k">"digitableLine"</span>: <span class="s">"75691.30672 01285.7308…"</span>,
-  <span class="k">"pixCopyPaste"</span>: <span class="s">"00020101021226…"</span>,
-  <span class="k">"pdfUrl"</span>: <span class="s">"/public/boletos/…/pdf"</span>
+  "provider": <span class="s">"sicoob"</span>,
+  "status": <span class="s">"pending"</span>,
+  "digitableLine": <span class="s">"75691.30672 01285.7308..."</span>,
+  "pixCopyPaste": <span class="s">"00020101021226..."</span>,
+  "pdfUrl": <span class="s">"/public/boletos/.../pdf"</span>
 }</pre>
-        </div>
-      </div>
-
-      <div class="stats">
-        <div class="stat"><b>4 bancos</b><span>Sicoob, Sicredi, Itaú e Banco do Brasil em uma única API</span></div>
-        <div class="stat"><b>Boleto + Pix</b><span>Boleto híbrido com QR Code, cobrança Pix e links de pagamento</span></div>
-        <div class="stat"><b>mTLS · OAuth2</b><span>Certificados digitais, webhooks autenticados e dados cifrados</span></div>
-        <div class="stat"><b>100+ testes</b><span>Testes automatizados cobrindo bancos, webhooks e PDFs</span></div>
-      </div>
-    </div>
+    <p class="small">Node.js, TypeScript, Fastify, Zod, PostgreSQL, pdf-lib, bwip-js e Vitest, publicado via Cloudflare Tunnel. O código é privado.</p>
   </section>
 
-  <section class="soft" id="especialidades">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Especialidades</span>
-        <h2>Onde eu gero mais resultado</h2>
-        <p>Experiência prática em integrações financeiras e fiscais que rodam em produção, com clientes reais e dinheiro real.</p>
-      </div>
-      <div class="grid grid-3">
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M12 3l9 5H3z"/></svg></div>
-          <h3>APIs bancárias e cobrança</h3>
-          <p>Registro e gestão de boletos direto com os bancos, com autenticação forte e regras de cada instituição.</p>
-          <ul>
-            <li>Emissão, consulta, baixa e alteração de boletos</li>
-            <li>Juros, multa, desconto, protesto e negativação</li>
-            <li>Certificados A1 (PFX/CRT), mTLS e OAuth2</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg></div>
-          <h3>Pix e links de pagamento</h3>
-          <p>Pagamentos instantâneos integrados ao fluxo de cobrança e conciliação automática.</p>
-          <ul>
-            <li>Boleto híbrido (bolecode) com QR Code Pix</li>
-            <li>Cobranças Pix imediatas e com vencimento</li>
-            <li>Links de pagamento e baixa automática por webhook</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-          <h3>Open Finance</h3>
-          <p>Integrações com o ecossistema de Open Finance para dados e pagamentos com segurança.</p>
-          <ul>
-            <li>Fluxos de consentimento e autorização</li>
-            <li>Consulta de contas, saldos e extratos</li>
-            <li>Iniciação de pagamentos e conciliação</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></div>
-          <h3>Área fiscal</h3>
-          <p>Emissão de documentos fiscais e obrigações acessórias, prontas para as mudanças da legislação.</p>
-          <ul>
-            <li>NF-e e NFS-e (notas de serviço)</li>
-            <li>SPED Fiscal (EFD ICMS/IPI)</li>
-            <li>Adequação à Reforma Tributária (IBS e CBS)</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
-          <h3>Aplicativos e sites</h3>
-          <p>Produtos completos para o usuário final, com painel administrativo e integração ao backend.</p>
-          <ul>
-            <li>Aplicativo e site de gestão de pontos</li>
-            <li>Painéis administrativos e relatórios</li>
-            <li>Interfaces responsivas para celular e desktop</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-          <h3>Casamentos e lista de presentes</h3>
-          <p>Sistema para casamentos com lista de presentes online, unindo experiência do convidado e pagamentos.</p>
-          <ul>
-            <li>Site do evento e lista de presentes</li>
-            <li>Pagamento online dos presentes</li>
-            <li>Painel para o casal acompanhar tudo</li>
-          </ul>
-        </article>
-      </div>
-    </div>
+  <section id="projetos">
+    <h2>Outros projetos</h2>
+    <dl class="projects">
+      <dt>Emissor fiscal</dt>
+      <dd>NF-e, NFS-e e arquivos do SPED Fiscal (EFD ICMS/IPI), já com as mudanças da Reforma Tributária (IBS e CBS).</dd>
+      <dt>Open Finance e pagamentos</dt>
+      <dd>Consentimento, consulta de contas e extratos, iniciação de pagamento, Pix e links de pagamento com conciliação automática.</dd>
+      <dt>Gestão de pontos</dt>
+      <dd>Aplicativo e site, com painel administrativo e relatórios.</dd>
+      <dt>Casamentos</dt>
+      <dd>Site do casal com lista de presentes, pagamento online pelos convidados e um painel para os noivos acompanharem tudo.</dd>
+    </dl>
   </section>
 
-  <section id="destaque">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Projeto em destaque</span>
-        <h2>Drive Boleto — plataforma de cobrança multibanco</h2>
-        <p>API que conecta o ERP das empresas a vários bancos com um contrato só: emite boletos e Pix, gera o PDF com a marca do cliente e devolve os pagamentos automaticamente.</p>
-      </div>
-
-      <div class="feature">
-        <div>
-          <span class="badge">Em produção · código proprietário</span>
-          <ul class="checks">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Uma API, vários bancos.</b> Sicoob, Sicredi, Itaú e Banco do Brasil atrás do mesmo contrato REST, escolhendo a conexão certa de cada cliente.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Boleto comum e híbrido.</b> Boleto com QR Code Pix, juros, multa, desconto, protesto e negativação, respeitando as regras de cada banco.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>PDF com a marca do cliente.</b> Layout próprio gerado no servidor (logo, cor, notas fiscais) com a ficha de compensação no padrão FEBRABAN, código de barras e QR Code.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Webhooks nos dois sentidos.</b> Recebe os avisos de pagamento dos bancos (com OAuth2 do lado da plataforma) e notifica o ERP, com fila de reenvio.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segurança e rastreabilidade.</b> Credenciais e certificados cifrados com AES-256-GCM, tokens por cliente, auditoria e registro cifrado de cada troca com o banco.</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Operação contínua.</b> Sincronização periódica de status, painel administrativo, deploy como serviço com túnel Cloudflare e mais de 100 testes automatizados.</span></li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Node.js</span><span class="tag">TypeScript</span><span class="tag">Fastify</span><span class="tag">Zod</span>
-            <span class="tag">PostgreSQL</span><span class="tag">pdf-lib</span><span class="tag">bwip-js</span><span class="tag">QR Code Pix</span>
-            <span class="tag">Vitest</span><span class="tag">Docker</span><span class="tag">Cloudflare Tunnel</span>
-          </div>
-        </div>
-
-        <div class="flow" aria-label="Arquitetura da plataforma">
-          <h4>Como funciona</h4>
-          <div class="node"><b>ERP / sistema do cliente</b><small>Token por empresa · externalId idempotente</small></div>
-          <div class="arrow">REST + JSON</div>
-          <div class="node core"><b>API Drive Boleto</b><small>Fastify · Zod · PostgreSQL · PDF com a marca · fila de webhooks</small></div>
-          <div class="arrow">mTLS + OAuth2</div>
-          <div class="banks">
-            <div class="node">Sicoob</div><div class="node">Sicredi</div>
-            <div class="node">Itaú</div><div class="node">Banco do Brasil</div>
-          </div>
-          <div class="arrow">Aviso de pagamento → baixa automática → webhook para o ERP</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="soft" id="projetos">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Projetos</span>
-        <h2>Outros trabalhos</h2>
-        <p>Sistemas desenvolvidos para empresas e clientes finais nas áreas fiscal, financeira e de produto.</p>
-      </div>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3>Emissor fiscal e SPED</h3>
-          <p>Geração de notas fiscais de produto e de serviço e arquivos do SPED Fiscal, com evolução para as regras da Reforma Tributária.</p>
-          <div class="tags"><span class="tag">NF-e</span><span class="tag">NFS-e</span><span class="tag">SPED Fiscal</span><span class="tag">IBS/CBS</span></div>
-        </article>
-        <article class="card">
-          <h3>Integrações Open Finance e pagamentos</h3>
-          <p>Conexões bancárias para consulta de dados e pagamentos, com Pix, links de pagamento e conciliação automática.</p>
-          <div class="tags"><span class="tag">Open Finance</span><span class="tag">Pix</span><span class="tag">Links de pagamento</span><span class="tag">Webhooks</span></div>
-        </article>
-        <article class="card">
-          <h3>Gestão de pontos — app e site</h3>
-          <p>Aplicativo e site para registro e acompanhamento de pontos, com painel administrativo e relatórios.</p>
-          <div class="tags"><span class="tag">Aplicativo</span><span class="tag">Site</span><span class="tag">Painel admin</span><span class="tag">API</span></div>
-        </article>
-        <article class="card">
-          <h3>Casamentos e lista de presentes</h3>
-          <p>Plataforma para casamentos com site do evento, lista de presentes e pagamento online para os convidados.</p>
-          <div class="tags"><span class="tag">Site</span><span class="tag">Lista de presentes</span><span class="tag">Pagamentos</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="stack">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Stack</span>
-        <h2>Ferramentas do dia a dia</h2>
-        <p>A mesma stack que mantém a Drive Boleto em produção.</p>
-      </div>
-      <div class="grid grid-3">
-        <div class="card stack-group">
-          <h3>Backend</h3>
-          <div class="tags"><span class="tag">Node.js</span><span class="tag">TypeScript</span><span class="tag">Fastify</span><span class="tag">Zod</span><span class="tag">APIs REST</span><span class="tag">Webhooks</span></div>
-        </div>
-        <div class="card stack-group">
-          <h3>Dados</h3>
-          <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">SQL</span><span class="tag">Migrações</span><span class="tag">Idempotência</span></div>
-        </div>
-        <div class="card stack-group">
-          <h3>Segurança e integrações</h3>
-          <div class="tags"><span class="tag">OAuth2</span><span class="tag">mTLS</span><span class="tag">Certificado A1</span><span class="tag">AES-256-GCM</span><span class="tag">HMAC</span></div>
-        </div>
-        <div class="card stack-group">
-          <h3>Documentos</h3>
-          <div class="tags"><span class="tag">pdf-lib</span><span class="tag">bwip-js</span><span class="tag">QR Code</span><span class="tag">FEBRABAN</span><span class="tag">Pix BR Code</span></div>
-        </div>
-        <div class="card stack-group">
-          <h3>Qualidade</h3>
-          <div class="tags"><span class="tag">Vitest</span><span class="tag">Testes de integração</span><span class="tag">Code review</span><span class="tag">Auditoria</span></div>
-        </div>
-        <div class="card stack-group">
-          <h3>Infra e frontend</h3>
-          <div class="tags"><span class="tag">Docker</span><span class="tag">Compose</span><span class="tag">Cloudflare Tunnel</span><span class="tag">Windows Services</span><span class="tag">PowerShell</span><span class="tag">Git/GitHub</span><span class="tag">HTML/CSS/JS</span></div>
-        </div>
-      </div>
-    </div>
+  <section id="ferramentas">
+    <h2>O que eu uso</h2>
+    <dl class="tools">
+      <dt>Backend</dt><dd>Node.js, TypeScript, Fastify, Zod, APIs REST, webhooks</dd>
+      <dt>Dados</dt><dd>PostgreSQL, SQL, migrações</dd>
+      <dt>Integração e segurança</dt><dd>OAuth2, mTLS, certificado A1, HMAC, AES-256-GCM</dd>
+      <dt>Documentos</dt><dd>pdf-lib, bwip-js, QR Code, padrão FEBRABAN, Pix BR Code</dd>
+      <dt>Testes</dt><dd>Vitest, testes de integração</dd>
+      <dt>Infra</dt><dd>Docker, Cloudflare Tunnel, PowerShell, Git e GitHub</dd>
+      <dt>Frontend</dt><dd>HTML, CSS, JavaScript</dd>
+    </dl>
   </section>
 
   <section id="contato">
-    <div class="wrap">
-      <div class="contact">
-        <span class="kicker">Contato</span>
-        <h2>Vamos construir algo juntos?</h2>
-        <p>Integrações bancárias, soluções fiscais, aplicativos ou sites: me chame para conversar sobre o seu projeto.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://github.com/LucasXPXL" target="_blank" rel="noopener">Falar pelo GitHub</a>
-        </div>
-      </div>
-    </div>
+    <h2>Contato</h2>
+    <p>Para propostas, projetos ou trocar uma ideia, me chama no LinkedIn.</p>
+    <ul class="links">
+      <li><span class="label">LinkedIn</span> <a href="https://www.linkedin.com/in/lucas-gabriel-e-silva-pereira/" target="_blank" rel="noopener">linkedin.com/in/lucas-gabriel-e-silva-pereira</a></li>
+      <li><span class="label">GitHub</span> <a href="https://github.com/LucasXPXL" target="_blank" rel="noopener">github.com/LucasXPXL</a></li>
+    </ul>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="year">2026</span> Lucas Pereira</span>
-    <span>Desenvolvedor Full Stack Sênior</span>
-  </div>
-</footer>
+<footer>© 2026 Lucas Pereira</footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    const root = document.documentElement;
-    const current = root.getAttribute("data-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    const next = current === "dark" ? "light" : "dark";
-    root.setAttribute("data-theme", next);
-    try { localStorage.setItem("theme", next); } catch (e) {}
-  });
-</script>
 </body>
 </html>

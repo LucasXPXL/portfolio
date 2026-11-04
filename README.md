@@ -1,20 +1,14 @@
-# Lucas Pereira · Portfólio
+# Lucas Pereira
 
-Desenvolvedor Full Stack Sênior especializado em **integrações financeiras e fiscais**.
+Desenvolvedor full stack sênior. Trabalho principalmente com integração bancária e fiscal:
 
-- **APIs bancárias e cobrança:** emissão, consulta e baixa de boletos (Sicoob, Sicredi, Itaú, Banco do Brasil), mTLS, OAuth2, certificados A1
-- **Pix e links de pagamento:** boleto híbrido (bolecode), cobranças Pix, conciliação por webhook
-- **Open Finance:** consentimento, dados bancários e iniciação de pagamentos
-- **Área fiscal:** NF-e, NFS-e, SPED Fiscal e adequação à Reforma Tributária (IBS/CBS)
+- **Cobrança e pagamentos:** registro e baixa de boletos direto com os bancos, boleto com QR Code Pix, Pix, links de pagamento, Open Finance
+- **Fiscal:** NF-e, NFS-e, SPED Fiscal e Reforma Tributária (IBS/CBS)
 - **Aplicativos e sites:** gestão de pontos, sistema para casamentos com lista de presentes
 
-## Projeto em destaque: Drive Boleto
+Projeto principal hoje: **Drive Boleto**, plataforma de cobrança multibanco em produção (Node.js, TypeScript, Fastify, Zod, PostgreSQL, pdf-lib, Vitest).
 
-Plataforma de cobrança multibanco em produção: uma API REST única que conecta o ERP das empresas aos bancos, emite boleto e Pix, gera o PDF com a marca do cliente (padrão FEBRABAN) e devolve os pagamentos automaticamente por webhook.
+Site: https://lucas-pereira.lucasgabriel8952.workers.dev
+LinkedIn: https://www.linkedin.com/in/lucas-gabriel-e-silva-pereira/
 
-**Stack:** Node.js · TypeScript · Fastify · Zod · PostgreSQL · pdf-lib · bwip-js · Vitest · Docker · Cloudflare Tunnel
-
-## Site
-
-Página estática em um único arquivo (`index.html`), sem build. Para ver localmente, abra o arquivo no navegador.
-No ar em https://lucas-pereira.lucasgabriel8952.workers.dev (Cloudflare Workers, projeto `lucas-pereira`).
+O site é um `index.html` só, sem build; para ver localmente basta abrir o arquivo no navegador.
