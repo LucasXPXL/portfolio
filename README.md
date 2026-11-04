@@ -8,7 +8,7 @@ Desenvolvedor full stack sênior. Trabalho principalmente com integração banc�
 
 Projeto principal hoje: **Drive Boleto**, plataforma de cobrança multibanco em produção (Node.js, TypeScript, Fastify, Zod, PostgreSQL, pdf-lib, Vitest).
 
-Site: https://lucas-pereira.lucasgabriel8952.workers.dev
+Site: https://lucas.systemlc.com.br
 LinkedIn: https://www.linkedin.com/in/lucas-gabriel-e-silva-pereira/
 
 O site é um `index.html` só, sem build; para ver localmente basta abrir o arquivo no navegador.
